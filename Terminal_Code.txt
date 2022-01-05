@@ -1,0 +1,36 @@
+TERMINAL INPUTS/OUTPUTS:
+
+Windows PowerShell
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+PS C:\Users\badca> CD Blockchain-Tools/wallet
+PS C:\Users\badca\Blockchain-Tools\wallet> python
+Python 3.7.11 (default, Jul 27 2021, 09:42:29) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> coins = {'eth':derive_wallets(mnemonic, ETH, 3), 'btc-test':derive_wallets(mnemonic, BTCTEST, 3)}
+>>> eth_priv_key = coins['eth'][0]['privkey']
+>>> print(eth_priv_key)
+0xd36eb3f541c90f19705b3b4cfe878cfe3b7456b5ce1e76ace8dfacbccb6333c7
+>>> btctest_priv_key = coins['btc-test'][0]['privkey']
+>>> print(btctest_priv_key)
+cPaNtB94JGw9r8kMys5A9H4fF8dBj4UxwfPtykY2vH9QR5D7UbAK
+>>> priv_key_to_account(ETH, eth_priv_key)
+<eth_account.signers.local.LocalAccount object at 0x0000020114407F48>
+>>> priv_key_to_account(BTCTEST, btctest_priv_key)
+<PrivateKeyTestnet: mr8vMbDSEYC779zhdN2gYmuPfEz5hszBsc>
+>>> create_tx(BTCTEST, btc_acc,'mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt', 0.0001)  
+'{"unspents":[{"amount":100000,"confirmations":4,"script":"76a914747e9d2520c294e04a684216b3ae42b13161d09c88ac","txid":"f13ffb8533106c8013e4142689ac273a94233f2530ef88b96fb089149b283d95","txindex":1,"type":"p2pkh","vsize":148,"segwit":false,"sequence":4294967295},{"amount":100000,"confirmations":1,"script":"76a914747e9d2520c294e04a684216b3ae42b13161d09c88ac","txid":"d4f4840bc1aeea56faf4dcfe294b99fdc3f63b13baeb8f56fa73665ec38a38b1","txindex":1,"type":"p2pkh","vsize":148,"segwit":false,"sequence":4294967295}],"outputs":[["mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt",10000],["mr8vMbDSEYC779zhdN2gYmuPfEz5hszBsc",186260]]}'
+>>> send_tx(BTCTEST, btc_acc,'mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt', 0.001)
+>>> derive_wallets(mnemonic, ETH, 3)
+[{'path': "m/44'/60'/0'/0/0", 'address': '0x45D09DD827d7E831EF60f4E8EF7EAA9b0b1edC66', 'xprv': 'xprvA3P4KWwQ248FjNdnLVi9hmdVieUU5M7DXoVGbDsUUuxt3qS3Af3AkTezKgR7oYZgLC217Ffi4gSt7g1E9hZQAMsww1kARe3', 'privkey': '0xd36eb31a8', 'pubkeyhash': '3a7b0b58dc27f6ee3b1832bfc371abe2e3857672', 'index': 0}, {'path': "m/44'/60'/0'/0/1", 'ad, 'pubkey': '035848f49e923c958c0de3e8b2609cc341b47b45ce162f35440fe36390f9a94659', 'pubkeyhash': 'f898e213ff8d': 'xprvA3P4KWwQ2WuHHCSeAJP9q7kEzh3kYSkVEzcphWhF1hSicR7St8hQonKkotpa4djcwYp7rweSoiWcesztq6GAeZo3Nv5XrJMF3NArJivkey': '0x14a9d99906fe9919ae44bac0d4d11d1620df56305bafa9982c025e8ff7e84f02', 'pubkey': '0282b007eebf8a71e65e
+VX5kfv8VnXMTmycznBRL5qkG5wnPeZSZMTZmMKTeNGiPLDwP3XhhsMr4DNR2WiuNw3xjKYzmZ68zd', 'privkey': 'cPaNtB94JGw9r8kMyESjWYc8', 'xpub': 'tpubDGnbC7F4L8C8APyASHcL414GVFf9TB5WmFBgbhYHi65FxruuBkezLVzRAQt7ryExsT7N2dYCQ7K49xxwRQ9BFKkxC6MLXxB8GpdULdUpm1P1B31Z2NyFp4NVubMaEwTPdYT9AQHTUU48euN4dj', 'xpub': 'tpubDGnbC7F4L8C8AyezrLZN8Wev9u3Sg1Js8tj4yt9', 'pubkey': '025662bd20f6157f80ecfa4379684babc2e04c9af97be41a7f53ba1d60db699492', 'pubkeyhash': 'ad738     
+>>> eth_acc = priv_key_to_account(ETH, eth_priv_key)
+>>> create_tx(ETH, eth_acc, '0x0dCAF04C1128F0b6519B6DE5ef14AFe39a01E612', 250
+>>> send_tx(ETH, eth_acc, '0x0dCAF04C1128F0b6519B6DE5ef14AFe39a01E612', 250)
+HexBytes('0x15f3199a26dced1ff730c55e1a2269261c3d2d8ee490548f4f306f53981950cb')
+>>> w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:8545/0xd36eb3f541c90f19705b3b4cfe878cfe3b7456b5ce1e76ace8dfacbccb6333c7"))
+>>> w3.eth.getBalance("0x45D09DD827d7E831EF60f4E8EF7EAA9b0b1edC66")
+499999579999999999750
+>>> send_tx(ETH, eth_acc, '0x0dCAF04C1128F0b6519B6DE5ef14AFe39a01E612', 250)  
+HexBytes('0x7a9bacb0dd32becd4975d43b9616cbbfefc6a71fbe4cc8f78a4c0b427209b2fe')
+>>> w3.eth.getBalance("0x45D09DD827d7E831EF60f4E8EF7EAA9b0b1edC66")
+499999159999999999500
