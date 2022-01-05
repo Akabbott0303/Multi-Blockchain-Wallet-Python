@@ -24,7 +24,7 @@ To test that you can run the ./derive script properly, run the following command
 
 The output should look similar to this:
 
-![symlink_creation_output](/Screenshots/symlink_creation_output.png)
+![symlink_creation_output](/Screenshots/symlink_creation_output.PNG)
 
 Now you can start creating your own multi-blockchain wallet!
 
@@ -38,11 +38,11 @@ The create_tx function creates a raw, unsigned transaction that contains the met
 
 # Sending a BTCTEST Transaction
 
-![Send BTC Code](/Screenshots/Send BTC Code.png)
-![BTC Send Transaction Confirmation](/Screenshots/BTC Send Transaction Confirmation.png)
+![Send_BTC_Code](/Screenshots/Send_BTC_Code.PNG)
+![BTC_Send_Transaction_Confirmation](/Screenshots/BTC_Send_Transaction_Confirmation.PNG)
 
 # Sending an ETH Transaction
 
-![Send ETH Code](/Screenshots/Send ETH Code.png)
-![ETH Send Transaction Confirmation 1](/Screenshots/ETH Send Confirmation 1.png)
-![ETH Send Transaction Confirmation 2](/Screenshots/ETH Send Confirmation 2.png)
+![Send-ETH-Code](/Screenshots/Send-ETH-Code.PNG)
+![ETH_Send_Transaction_Confirmation_1](/Screenshots/ETH_Send_Confirmation_1.PNG)
+![ETH_Send_Transaction_Confirmation_2](/Screenshots/ETH_Send_Confirmation_2.PNG)
