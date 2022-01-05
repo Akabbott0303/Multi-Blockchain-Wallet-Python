@@ -1,10 +1,10 @@
 # Multi-Blockchain Wallet in Python
 
-This project includes code and instructions for building and using a cryptocurrency hot wallet in Python.  The code imports the required libraries and environment variable and creates functions to create the wallet, convert privates keys to wallet addresses, and create and send transactions.  The coins used are Ethereum (ETH) and Bitcoin testnet (BTCTEST).  Additional coins can be added to this wallet.
+This project includes code and instructions for building and using a cryptocurrency hot wallet in Python.  The code contained in the file [wallet.py](/wallet.py)  imports the required libraries and environment variable and creates functions to create the wallet, convert privates keys to wallet addresses, and create and send transactions.  The coins used are Ethereum (ETH) and Bitcoin testnet (BTCTEST).  Additional coins can be added to this wallet.
 
 ### Installations
 
-Use the [Requirements](/Requirements.txt) to install the dependencies needed to run the code to create the HD wallet.  
+Use the [Requirements](/Requirements.txt) text file to install the dependencies needed to run the code to create the HD wallet.  
 
 Install [PHP and Apache Web Server](https://www.apachefriends.org/index.html) for Windows operating systems.  Windows users might also need to install [Microsoft Visual C++ Build Tools](https://visualstudio.microsoft.com/downloads/).
 
@@ -30,7 +30,7 @@ Now you can start creating your own multi-blockchain wallet!
 
 ### Setting up the Wallet and Sending Transactions
 
-Thy Python code first imports all libraries and loads an environment variable to set the mnemonic phrase that will be used to generate the keys and addresses.  The code also imports a constants file to set the coin variables.  You'll need to add to these if you want to use the wallet to hold additional coin types.
+Thy Python code in the file [wallet.py](/wallet.py) first imports all libraries and loads an environment variable to set the mnemonic phrase that will be used to generate the keys and addresses.  The code also imports a constants file to set the coin variables.  You'll need to add to these if you want to use the wallet to hold additional coin types.
 
 The derive_wallets function uses the mnemonic phrase to generate wallet private keys and addresses for each coin type.  A dictionary called coins is established to hold the keys.  The priv_key_to_account function creates an account object from a private key.  
 
